@@ -10,11 +10,22 @@ const message = document.querySelector("#error-message");
 // checkButton.addEventListener("click", ()=> console.log("clicked"));
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
+    message.style.display ="none";
     if(billAmount.value > 0){
+        if(cashGiven.value >= billAmount.value){
+            const amountToBeReturned = cashGiven.value - billAmount.value;
+            // calculateChange(amountToBeReturned);
+
+        }else{
+            showMessage("Please provide Cash equal to or more than Billed Amount")
+        }
 
     }else{
-        message.innerText = "Bhosda mra, Pehankelode";
-
+        showMessage("Please Enter a Valid Amount");
     }
 });
 
+function showMessage(msg){
+    message.style.display ="block";
+    message.innerText = msg;
+}
