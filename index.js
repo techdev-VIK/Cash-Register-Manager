@@ -13,13 +13,13 @@ const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
     message.style.display ="none";
-    if(billAmount.value > 0){
-        if(cashGiven.value > billAmount.value){
-            const amountToBeReturned = cashGiven.value - billAmount.value;
+    if(parseInt(billAmount.value > 0)){
+        if(parseInt(cashGiven.value) >= parseInt(billAmount.value)){
+            const amountToBeReturned = parseInt(cashGiven.value) - parseInt(billAmount.value);
             calculateChange(amountToBeReturned);
         }
         else{
-            showMessage("You're Next!!!");
+            showMessage("Are You Serious? Cash should be equal or more than Billed Amount");
         }
 
     }else{
