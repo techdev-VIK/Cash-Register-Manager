@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+   
+    color: rgb(10, 10, 10);
+    box-sizing: border-box;
+}
 
+:root {
+    --primary: #b700ff;
+  }
 
 .container{
     display:flex;
@@ -8,11 +19,103 @@
     margin:auto;
     margin-top: 10rem;
     font-family: cursive, sans-serif;
-    background-color: #83e316;
-    color: rgb(255, 255, 255);
+    background-color: #eaf209;
     padding: 10px;
     border-radius: 4px;
     box-shadow: 2px 2px 20px 23px #2efd84;
 
 }
 
+.no-of-notes{
+    
+    color: #4800ff;
+    
+    
+}
+
+
+
+input{
+    margin: 0.5rem auto 1rem auto;
+    padding: 0.5rem;
+    max-width: 10rem;
+    text-align: center;
+    border-color: var(--primary) ;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+input:focus{
+    outline: none;
+}
+
+
+
+
+body{
+    margin: auto;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+
+
+#check-button{
+    margin: 0.5rem auto 1rem;
+    padding: 0.4rem 1rem;
+    cursor:pointer;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    background-color: var(--primary);
+    color: white;
+    border: 1px solid white;
+}
+
+label{
+    font-weight: 600;
+}
+
+
+
+#error-message{
+    color: red;
+}
+.change-table{
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 60%;
+}
+
+
+
+
+.heading{
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+.desc{
+    margin-bottom: 2rem;
+}
+
+
+.heading-table {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: larger;
+    font-weight: 600;
+}
+
+th, td{
+    border: 1px solid var(--primary);
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
