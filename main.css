@@ -89,10 +89,8 @@ label{
 #error-message{
     color: red;
     margin:auto;
-    font-weight: 1200;
     border: 1px solid white;
     margin: 0.5rem auto 1rem;
-    padding: 0.4rem 1rem;
     border-radius: 0.5rem;
 
 }
