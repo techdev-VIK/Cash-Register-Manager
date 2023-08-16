@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
+    background-color: #000000;
    
-    color: rgb(10, 10, 10);
+    color: rgb(255, 255, 255);
     box-sizing: border-box;
 }
 
 :root {
-    --primary: #b700ff;
+    --primary: #2013dd;
   }
 
 .container{
@@ -19,16 +19,16 @@
     margin:auto;
     margin-top: 10rem;
     font-family: cursive, sans-serif;
-    background-color: #eaf209;
+    background-color: #ade934;
     padding: 10px;
     border-radius: 4px;
-    box-shadow: 2px 2px 20px 23px #2efd84;
+    box-shadow: 2px 2px 20px 23px #4d2efd;
 
 }
 
 .no-of-notes{
     
-    color: #4800ff;
+    color: #ffbb00;
     
     
 }
@@ -63,6 +63,7 @@ body{
 
 
 #check-button{
+    font-weight: 500;
     margin: 0.5rem auto 1rem;
     padding: 0.4rem 1rem;
     cursor:pointer;
@@ -78,12 +79,22 @@ body{
 
 label{
     font-weight: 600;
+    display: inline-block;
+    margin: auto;
+
 }
 
 
 
 #error-message{
     color: red;
+    margin:auto;
+    font-weight: 1200;
+    border: 1px solid white;
+    margin: 0.5rem auto 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+
 }
 .change-table{
     font-size: 1rem;
@@ -112,7 +123,8 @@ label{
 
 th, td{
     border: 1px solid var(--primary);
-    border-radius: 0.4rem;
+    border-radius: 0.2rem;
+    width:4rem;
     padding: 0.2rem;
     -webkit-border-radius: 0.4rem;
     -moz-border-radius: 0.4rem;
