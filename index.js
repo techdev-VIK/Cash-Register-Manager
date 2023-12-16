@@ -48,6 +48,8 @@ function showMessage(msg){
     
     message.style.display ="block";
     message.innerText = msg;
-    
+    setTimeout(function () {
+        message.style.display = "none";
+    }, 3000); // 3000 milliseconds = 3 seconds
 }
-
+    
