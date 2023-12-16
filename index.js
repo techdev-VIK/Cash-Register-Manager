@@ -21,6 +21,9 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
         }
         else{
             showMessage("Are You Serious? Cash should be equal or more than Billed Amount");
+            setTimeout(function () {
+                message.style.display = "none";
+            }, 3000); // 3000 milliseconds = 3 seconds
             billAmount.value = '';
             cashGiven.value = '';
             
@@ -28,6 +31,9 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
 
     }else{
         showMessage("Please Enter a Valid Amount");
+        setTimeout(function () {
+            message.style.display = "none";
+        }, 3000); // 3000 milliseconds = 3 seconds
         billAmount.value = '';
         cashGiven.value = '';
     }
@@ -48,8 +54,7 @@ function showMessage(msg){
     
     message.style.display ="block";
     message.innerText = msg;
-    setTimeout(function () {
-        message.style.display = "none";
-    }, 3000); // 3000 milliseconds = 3 seconds
+
+    
 }
     
