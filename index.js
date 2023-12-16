@@ -5,6 +5,7 @@ const message = document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
 
 const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
+message.style.display ="none";
 // console.log(billAmount.value);
 // console.log(cashGiven.value);
 
@@ -12,7 +13,7 @@ const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 // checkButton.addEventListener("click", ()=> console.log("clicked"));
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
-    message.style.display ="none";
+   
     if(parseInt(billAmount.value) > 0){
         if(parseInt(cashGiven.value) >= parseInt(billAmount.value)){
             const amountToBeReturned = parseInt(cashGiven.value) - parseInt(billAmount.value);
@@ -20,10 +21,15 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
         }
         else{
             showMessage("Are You Serious? Cash should be equal or more than Billed Amount");
+            billAmount.value = '';
+            cashGiven.value = '';
+            
         }
 
     }else{
         showMessage("Please Enter a Valid Amount");
+        billAmount.value = '';
+        cashGiven.value = '';
     }
 });
 
@@ -39,6 +45,9 @@ function calculateChange(amountToBeReturned){
 }
 
 function showMessage(msg){
+    
     message.style.display ="block";
     message.innerText = msg;
+    
 }
+
